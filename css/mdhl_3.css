@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+body{
+  background-color: #e2e1de;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+
+
+.titles{
+  width: calc(100vw - 4rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem 0 1rem;
+  position: absolute;
+}
+
+.titles > h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-left: 3rem;
+  padding: 3rem 0;
+}
+
+.titles > h2 {
+  width: 35%;
+  text-align: end;
+}
+
+.titles > h2 , .content_left > h3{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.titles > h1 , .titles > h2 , .content_list__item > h3 , .content_left > h3{
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, -0.7)), url(../assets/img/design3_image1.jpg);
+  height: 38vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 73%;
+}
+
+.containerNav{
+  width: 100vw;
+  height: 3rem;
+  background-color: rgb(50, 50, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+.containerNav > ul{
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav_element{
+  text-decoration: underline;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.containerNav > ul , .nav_button > a{
+  color: #ffffff;
+}
+
+.nav_button:hover{
+  transform: scale(1.1);
+  transition: 200ms;
+  font-weight: 500;
+}
+
+
+.logo > img{
+  width: 10vw;
+}
+
+.container{
+  /* background: linear-gradient(rgba(50, 50, 50), rgba(0, 0, 0, -0.7)); */
+  /* background-color: #e2e1de; */
+  height: 54vh;
+  display: flex;
+  align-items: center;
+}
+
+.container_img{
+  width: 30vw;
+  height: 100%;
+  background: linear-gradient(to left, rgb(226, 225, 222), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../assets/img/design3_image2.jpg);
+  background-size: cover;
+}
+
+.content_list{
+  list-style: none;
+}
+
+.content_list__item{
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.739);
+  color: #ffffff;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.content_list__item:last-child{
+  margin-bottom: 0;
+}
+
+.content_list__item > h3{
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content_list__item > p {
+  text-indent: 1rem;
+  font-size: 0.8rem;
+}
+
+.about{
+  width: 65vw;
+}
+
+.container_contact{
+  width: 65vw;
+  height: 80%;
+  background-color:  rgba(0, 0, 0, 0.739);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.content_left{
+  margin: 1.5rem 0;
+  width: 47.5%;
+  border-right: 1px solid #ffffff;
+}
+
+.content_left > h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content_left > p , .content_left > a{
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.content_left > a{
+  width: 100%;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.container_social{
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo_social{
+  width: 3rem;
+}
+
+.content_right{
+  width: 47.5%;
+  align-items: center;
+}
+
+.content_right > form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form_imput{
+  width: calc(100% - 3rem);
+  padding: 0.5rem;
+  background-color: #ffffffab;
+  border-radius: 0.5rem;
+}
+
+textarea.form_imput{
+  height: 40%;
+}
+
+.form_imput__submit{
+  height: 2rem;
+  padding: 0 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.form_imput__submit:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 300ms;
+}
+
+/*RULES*/
+
+.container_rules{
+  width: calc(100vw - 4rem);
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+}
+
+.titles_main{
+  background-color: rgba(0, 0, 0, 0.739);
+  width: calc(100% - 40%);
+  text-align: center;
+  color: #ffffff;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titles_main > h3{
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.rules_list{
+  list-style: none;
+  width: 90%;
+}
+
+.rules_list__item{
+  background-color: rgba(0, 0, 0, 0.526);
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rules_list__item.sportsmanship{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sportsmanship_info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sportsmanship_info > h4 ,
+.rules_list__item.regulations > h4 ,
+.regulations_list__item > h5 ,
+.rules_list__item.allplay > h4{
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.sportsmanship_info > p{
+  text-align: justify;
+}
+
+.rules_img{
+  width: 30vw;
+  padding: 3rem 0;
+}
+
+.rules_img > img{
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 2px 2px px hsla(0, 0%, 0%, 0.5);
+}
+
+.rules_list__item.regulations > h4{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.regulations_list{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: decimal;
+  list-style-position: inside;
+  justify-content: space-around;
+}
+
+.regulations_list__item{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  width: calc(30% - 2rem);
+}
+
+
+
+.regulations_list__item > h5 , .regulations_list__item > p{
+  display: inline;
+}
+
+.regulations_list__item:first-child{
+  position: relative;
+}
+
+.dimensions_img{
+  width: calc(100% - 2rem);
+  position: absolute;
+  bottom: 15%;
+}
+
+.regulations_list__item:last-child > ol{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rules_list__item.allplay{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rules_list__item.allplay > p ,
+.rules_list__item.allplay > div{
+  width: 80%;
+  text-align: justify;
+}
+
+.rules_list__item.allplay > ul{
+  width: 70%;
+  list-style: disc;
+  list-style-position: inside;
+  text-align: justify;
+}
+
+.rules_img__shadow{
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+}
