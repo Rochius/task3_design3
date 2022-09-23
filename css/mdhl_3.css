@@ -14,9 +14,7 @@ body{
   position: relative;
 }
 
-
-
-.titles{
+.container_titles{
   width: calc(100vw - 4rem);
   display: flex;
   justify-content: space-between;
@@ -25,24 +23,26 @@ body{
   position: absolute;
 }
 
-.titles > h1{
+h1.title{
   font-size: 2.5rem;
   font-weight: 600;
   padding-left: 3rem;
   padding: 3rem 0;
 }
 
-.titles > h2 {
+h2.title {
   width: 35%;
   text-align: end;
 }
 
-.titles > h2 , .content_left > h3{
+h2.title , .content_left > h3{
   font-size: 2rem;
   font-weight: 500;
 }
 
-.titles > h1 , .titles > h2 , .content_list__item > h3 , .content_left > h3{
+.title ,
+.content_list__item > h3 ,
+.content_left > h3{
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -72,6 +72,16 @@ body{
   list-style: none;
 }
 
+.containerNav > ul > li{
+  width: 20%;
+  text-align: center;
+  border-right: 2px solid #ffffff;
+}
+
+.containerNav > ul > li:last-child{
+  border-right: none;
+}
+
 .nav_element{
   text-decoration: underline;
   font-size: 1.1rem;
@@ -82,8 +92,9 @@ body{
   color: #ffffff;
 }
 
-.nav_button:hover{
-  transform: scale(1.1);
+.nav_button > a:hover{
+  /* transform: scale(1.5); */
+  font-size: 1.1rem;
   transition: 200ms;
   font-weight: 500;
 }
@@ -94,11 +105,12 @@ body{
 }
 
 .container{
-  /* background: linear-gradient(rgba(50, 50, 50), rgba(0, 0, 0, -0.7)); */
-  /* background-color: #e2e1de; */
+  width: calc(100vw - 4rem);
   height: 54vh;
+  margin: 0 2rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .container_img{
@@ -163,16 +175,18 @@ body{
   color: #ffffff;
 }
 
-.content_left > a{
+.content_left > a , .link_email{
   width: 100%;
   text-decoration: underline;
   text-align: center;
+  color: #ffffff;
 }
 
 .container_social{
-  margin-top: 6rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: space-evenly;
+  list-style: none;
 }
 
 .logo_social{
@@ -210,6 +224,7 @@ textarea.form_imput{
   border-radius: 0.25rem;
 }
 
+.logo_social:hover ,
 .form_imput__submit:hover{
   cursor: pointer;
   transform: scale(1.1);
@@ -218,19 +233,17 @@ textarea.form_imput{
 
 /*RULES*/
 
-.container_rules{
-  width: calc(100vw - 4rem);
+.container.rules{
+  height: auto;
   margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
   font-size: 1.25rem;
 }
 
-.titles_main{
+.container_titles_main{
   background-color: rgba(0, 0, 0, 0.739);
-  width: calc(100% - 40%);
+  width: 90%;
   text-align: center;
   color: #ffffff;
   padding: 1rem 0;
@@ -238,9 +251,8 @@ textarea.form_imput{
   margin-bottom: 1.5rem;
 }
 
-.titles_main > h3{
+.container_titles_main >.title{
   font-weight: 700;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .rules_list{
@@ -268,10 +280,8 @@ textarea.form_imput{
   justify-content: space-evenly;
 }
 
-.sportsmanship_info > h4 ,
-.rules_list__item.regulations > h4 ,
-.regulations_list__item > h5 ,
-.rules_list__item.allplay > h4{
+.rules_title ,
+.info_titles > h3 , .info_titles > h4{
   font-weight: 600;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -311,8 +321,6 @@ textarea.form_imput{
   margin-bottom: 1rem;
   width: calc(30% - 2rem);
 }
-
-
 
 .regulations_list__item > h5 , .regulations_list__item > p{
   display: inline;
@@ -361,5 +369,115 @@ textarea.form_imput{
 .rules_img__shadow{
   width: 100%;
   border-radius: 1rem;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+}
+
+/*game info*/
+
+.container.game_info{
+  height: auto;
+  margin: 0 2rem;
+  justify-content: space-between;
+}
+
+.container_titles_main.info_titles{
+  margin: 1rem 5%;
+  font-size: 1.5rem;
+}
+
+section.container{
+  height: auto;
+  margin: 0 5%;
+  justify-content: space-between;
+}
+
+.container_table , .bottom_information{
+  width: calc(50% - 4rem);
+}
+
+.schedule_table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule_table > thead{
+  background-color: rgba(0, 0, 0, 0.739);
+  color: #ffffff;
+}
+
+.schedule_table > thead > tr > th {
+  height: 2rem;
+  padding-top: 0.5rem;
+}
+
+.schedule_table > thead > tr > th:first-child{
+  border-start-start-radius: 1rem;
+  border-end-start-radius: 1rem;
+}
+
+.schedule_table > thead > tr > th:last-child{
+  border-start-end-radius: 1rem;
+  border-end-end-radius: 1rem;
+}
+
+.schedule_table__row > td{
+  line-height: 3rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.schedule_table__row.border{
+  border-top: rgba(0, 0, 0, 0.7) 2px solid;
+}
+
+.container_table > p{
+  margin-top: 1rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.bottom_information{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerInformation{
+  margin-bottom: 1rem;
+}
+
+.containerInformation > div{
+  margin-bottom: 1rem;
+}
+
+.containerInformation > div > p{
+  margin-bottom: 0.5rem;
+}
+
+.containerInformation > div > div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_information__bold {
+  font-weight: bold;
+}
+
+.container_img_info{
+  width: 90%;
+  height: 50vh;
+  background: linear-gradient(rgb(226, 225, 222), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(226, 225, 222)), url(../assets/img/design3_image4.jpg);
+  background-size: cover;
+}
+
+.containerInformation{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #ffffff;
+}
+
+.card_shadow{
   box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
 }
